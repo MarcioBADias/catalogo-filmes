@@ -1,10 +1,13 @@
-
+import React from 'react';
+import Global from './styles/global';
+import Header from './components/header/header';
 
 function App() {
   return (
-    <div>
-      Ola mundo
-    </div>
+    <>
+      <Header/>
+      <Global/>
+    </>
   );
 }
 
