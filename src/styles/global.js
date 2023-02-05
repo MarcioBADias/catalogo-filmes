@@ -11,19 +11,28 @@ const Global = createGlobalStyle`
         margin: 0;
     }
 
+    :root {
+        --primary-color: #ffc107;
+        --secondary-color: #b8930c;
+        --light-color: #f8f9fa;
+        --dark-color: #343a40;
+        --black-color: #000;
+    }
+
     body {
-        background-color: #000;
-        color: #fff
+        background-color: var(--black-color);
+        color: var(--light-color);
     }
 
     a{
         text-decoration: none;
-        color: #f7d354;
-        transition: 0.5s;
 
-        :hover{
-            color: #b8930c
-        }
+    }
+
+    .card-area{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     
 

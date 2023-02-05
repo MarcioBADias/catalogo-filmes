@@ -21,11 +21,16 @@ const Home = () => {
     }, [])
     return (
         <>
-            <h2 className="my-2 text-center">Top 20 melhores filmes no cinema:</h2>
-            <div className="row">
-                {topMovies === 0 && <p>Carregando...</p>}
-                {topMovies.length > 0 && topMovies.map(movie => <div className="col"><CardMovie movie={movie}/></div>)}
-            </div>
+            <Container>
+            <h2 className="my-2 text-center">
+                Top 20 melhores filmes no cinema:
+            </h2>
+            </Container>
+            <Container className="card-area">
+            {topMovies === 0 && <p>Carregando...</p>}
+            {topMovies.length > 0 && topMovies
+                .map(movie => <CardMovie movie={movie}/>)}
+            </Container>
         </>
     )
 }

@@ -13,6 +13,7 @@ import {
     BiSearchAlt2 
 } from 'react-icons/bi';
 import { Link, useNavigate } from "react-router-dom";
+import * as C from './styles'
 
 const Header = () => {
     const [search, setSearch] = useState('');
@@ -29,10 +30,12 @@ const Header = () => {
     }
 
     return (
-        <Navbar color="dark" dark expand='md'>
+        <Navbar className="py-3 px-3" color="dark" dark expand='md'>
             <NavbarBrand>
                 <Link to='/'>
-                    <BiCameraMovie/> Top Movies
+                    <C.Title className="px-3">
+                        <BiCameraMovie/> Top Movies
+                    </C.Title>
                 </Link>
             </NavbarBrand>
             <Form onSubmit={handleSubmit}>

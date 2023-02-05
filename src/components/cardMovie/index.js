@@ -14,17 +14,19 @@ import {
 import { FaStar } from 'react-icons/fa'
 import { imgAPI } from "../../apiData";
 
+import * as C from './styles';
+
 const CardMovie = ({movie, showLink = true}) => {
     return(
-        <Container>
-            <Card className="mx-3 my-3" color="dark">
+        <C.Card className="mx-3 my-3">
+            <Card color="dark">
                 <CardImg
                     alt="Card image cap"
                     src={imgAPI + movie.poster_path}
                     top
                     width="100%"
                 />
-                <CardBody>
+                <C.CardBody>
                     <CardTitle tag="h5">
                         {movie.title}
                     </CardTitle>
@@ -37,12 +39,13 @@ const CardMovie = ({movie, showLink = true}) => {
                     {/* <CardText maxHeigt='100%'>
                         {movie.overview}
                     </CardText> */}
-                    <Button>
+                    <C.Button>
                         {showLink && <Link to={`/movies/${movie.id}`}>Detalhes</Link>}
-                    </Button>
-                </CardBody>
+                    </C.Button>
+                </C.CardBody>
             </Card>
-        </Container>
+        </C.Card>
+        
     )
 }
 
