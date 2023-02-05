@@ -13,6 +13,7 @@ const Global = createGlobalStyle`
 
     body {
         background-color: #000;
+        color: #fff
     }
 
     a{

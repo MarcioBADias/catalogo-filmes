@@ -20,8 +20,6 @@ const Header = () => {
                 <Link to='/'>
                     <BiCameraMovie/> Top Movies
                 </Link>
-                <Link to='/movie/1'>Movie</Link>
-                <Link to='/search'>Search</Link>
             </NavbarBrand>
             <InputGroup>
                 <Input size="sm" placeholder="Search for a movie..."/>
@@ -29,7 +27,6 @@ const Header = () => {
                     <BiSearchAlt2/>
                 </Button>
         </InputGroup>
-        <Outlet/>
       </Navbar>
     )
 }
