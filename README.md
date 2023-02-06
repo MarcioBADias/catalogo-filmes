@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Top-Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um aplicativo web desenvolvido com [React JS](https://reactjs.org/), que lista os 20 melhores filmes de acordo com a API da [The Movie DB](https://www.themoviedb.org/). O objetivo é fornecer uma interface fácil de usar para que os usuários possam descobrir e obter informações sobre os filmes mais populares da história do cinema.
 
-## Available Scripts
+## Recursos
+- Filtro para filmes já lançados
+- Especificações detalhadas de cada filme na lista
+- Direcionamento para página com mais informações sobre o filme selecionado
+- Design responsivo e estilizado com [Bootstrap](https://getbootstrap.com/) e [Styled Components](https://styled-components.com/)
+- Navegação fluida entre páginas com o uso do [React-Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- Uso de [useState](https://reactjs.org/docs/hooks-state.html) e [useEffect](https://reactjs.org/docs/hooks-effect.html) para manipular a API
+- Chave da API protegida em arquivo separado
 
-In the project directory, you can run:
+## Desafios
+- Integrar Bootstrap e Styled Components para obter um visual uniforme
+- Aprender sobre React-Router e como navegar entre páginas
+- Manipular a API com React Hooks
 
-### `npm start`
+## Resultado Final
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+O resultado final é uma página dinâmica e completa, que oferece aos usuários uma lista dos 20 melhores filmes de acordo com a API da The Movie DB, além de informações detalhadas sobre cada filme. Com o uso de tecnologias como Bootstrap, Styled Components, React-Router, useState e useEffect, a página apresenta um design responsivo e navegação fluida entre as páginas.
