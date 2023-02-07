@@ -1,15 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.div`
     border: 3px solid;
     border-radius: 15px;
+    justify-content
     
     :hover{
         border-color: var(--secondary-color);
     }
 
     @media(min-width: 720px){
-            max-width: 20vw;
+            max-width: 28vw;
         }
 `;
 

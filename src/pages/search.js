@@ -1,27 +1,38 @@
-import React, { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Global from '../styles/global';
-import { Container } from "reactstrap";
-import CardMovie from "../components/cardMovie";
+import { Container } from 'reactstrap';
+import CardMovie from '../components/cardMovie';
+import { keyAPI, searchAPI } from '../apiData';
 
 const Search = () => {
     const [searchParams] = useSearchParams();
 
     const [movies, setMovies] = useState([]);
-    const query = searchParams.length('q');
+    const query = searchParams.get('q');
+
+    const getSearchMovie = async (url) => {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        setMovies(data.results);
+    };
+
+    useEffect(()=>{
+        const searchURL = `${searchAPI}?${keyAPI}&query=${query}`;
+        getSearchMovie(searchURL);
+    }, [query]);
     return (
-        <>
-            <Container>
-                <h2 className="my-2 text-center">
-                    Resultados para: <span>{query}</span>
-                </h2>
-                <div>
-                    {movies === 0 && <p>Carregando...</p>}
-                    {movies.length > 0 && movies.map(movie => <CardMovie movie={movie}/>)}
-                </div>
+        <Container>
+            <h2 className='my-2 text-center'>
+                Resultados para: <span>{query}</span>
+            </h2>
+            <Container className='d-flex flex-wrap justify-content-around'>
+                {movies.length === 0 && <p>Carregando...</p>}
+                {movies.length > 0 && movies.map(movie => <CardMovie movie={movie}/>)}
             </Container>
-            <Global />
-        </>
+        </Container>
+        
     )
 }
 

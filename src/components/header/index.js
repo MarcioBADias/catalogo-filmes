@@ -24,7 +24,7 @@ const Header = () => {
 
         if(!search) return;
 
-        navigate(`/search?q=${search}`);
+        navigate(`/search?q=${search}`, { replace: true });
         setSearch('');
 
     }

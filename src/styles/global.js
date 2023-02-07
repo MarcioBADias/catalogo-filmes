@@ -29,12 +29,10 @@ const Global = createGlobalStyle`
 
     }
 
-    .card-area{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
+    span{
+        color:var(--primary-color);
+        font-weight: bold;
+    }  
 
 `;
 

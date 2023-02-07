@@ -18,7 +18,7 @@ import * as C from './styles';
 
 const CardMovie = ({movie, showLink = true}) => {
     return(
-        <C.Card className="mx-3 my-3">
+        <C.Card className="mx-1 my-3">
             <Card color="dark">
                 <CardImg
                     alt="Card image cap"
@@ -36,16 +36,16 @@ const CardMovie = ({movie, showLink = true}) => {
                     >
                         <FaStar/> {movie.vote_average}
                     </CardSubtitle>
-                    {/* <CardText maxHeigt='100%'>
-                        {movie.overview}
-                    </CardText> */}
+                    {showLink && 
                     <C.Button>
-                        {showLink && <Link to={`/movies/${movie.id}`}>Detalhes</Link>}
+                        <Link to={`/movie/${movie.id}`}>
+                            Detalhes
+                        </Link>
                     </C.Button>
+                    }
                 </C.CardBody>
             </Card>
         </C.Card>
-        
     )
 }
 
