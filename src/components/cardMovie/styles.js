@@ -1,19 +1,5 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
-    border: 3px solid;
-    border-radius: 15px;
-    justify-content
-    
-    :hover{
-        border-color: var(--secondary-color);
-    }
-
-    @media(min-width: 720px){
-            max-width: 28vw;
-        }
-`;
-
 export const Button = styled.button`
     background-color: var(--primary-color);
     border: none;
@@ -34,7 +20,3 @@ export const Button = styled.button`
     }
 `;
 
-export const CardBody = styled.div`
-    height: 100%;
-    padding: 1.5rem;
-`;

@@ -28,7 +28,7 @@ const Home = () => {
             <Container className='d-flex flex-wrap justify-content-around'>
             {topMovies === 0 && <p>Carregando...</p>}
             {topMovies.length > 0 && topMovies
-                .map(movie => <CardMovie movie={movie}/>)}
+                .map(movie => <CardMovie size='25' movie={movie}/>)}
             </Container>
         </Container>
     )

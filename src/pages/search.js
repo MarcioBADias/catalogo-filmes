@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Global from '../styles/global';
 import { Container } from 'reactstrap';
 import CardMovie from '../components/cardMovie';
 import { keyAPI, searchAPI } from '../apiData';
@@ -29,7 +28,7 @@ const Search = () => {
             </h2>
             <Container className='d-flex flex-wrap justify-content-around'>
                 {movies.length === 0 && <p>Carregando...</p>}
-                {movies.length > 0 && movies.map(movie => <CardMovie movie={movie}/>)}
+                {movies.length > 0 && movies.map(movie => <CardMovie size='25' movie={movie}/>)}
             </Container>
         </Container>
         
