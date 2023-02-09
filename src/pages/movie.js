@@ -15,9 +15,10 @@ const Movie = () => {
     };
 
     useEffect(()=>{
+        if (!id) return;
         const movieURL = `${urlAPI}${id}?${keyAPI}`;
         getAPIMovies(movieURL);
-    }, [movie]);
+    }, [id]);
 
     return (
         <Container>
