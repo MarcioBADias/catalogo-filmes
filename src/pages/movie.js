@@ -17,7 +17,7 @@ const Movie = () => {
     useEffect(()=>{
         const movieURL = `${urlAPI}${id}?${keyAPI}`;
         getAPIMovies(movieURL);
-    }, []);
+    }, [movie]);
 
     return (
         <Container>
