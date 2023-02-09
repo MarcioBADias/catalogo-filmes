@@ -11,11 +11,18 @@ const Search = () => {
     const query = searchParams.get('q');
 
     const getSearchMovie = async (url) => {
-        const response = await fetch(url);
-        const data = await response.json();
-        
-        setMovies(data.results);
+        try {
+             const response = await fetch(url);
+            if (!response.ok) {
+                 throw new Error(`${response.status} - ${response.statusText}`);
+            }
+            const data = await response.json();
+            setMovies(data.results);
+        } catch (error) {
+            console.error(error);
+        }
     };
+
 
     useEffect(()=>{
         const searchURL = `${searchAPI}?${keyAPI}&query=${query}`;
